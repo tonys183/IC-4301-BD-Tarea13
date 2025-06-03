@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Digital</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Biblioteca Digital</h1>
+    </header>
+
+    <main>
+        <section id="libros-disponibles">
+            <h2>Libros Disponibles</h2>
+            <div id="lista-libros" class="grid-container">
+            </div>
+        </section>
+
+        <section id="realizar-prestamo">
+            <h2>Realizar Préstamo</h2>
+            <form id="prestamo-form">
+                <div>
+                    <label for="libro-id-display">Libro Seleccionado:</label>
+                    <input type="text" id="libro-id-display" name="libro-id-display" readonly required>
+                    <input type="hidden" id="libro-id-prestamo" name="libro-id">
+                </div>
+                <div>
+                    <label for="usuario-id-prestamo">Seleccionar Usuario:</label>
+                    <select id="usuario-id-prestamo" name="usuario-id" required>
+                        <option value="" disabled selected>Cargando usuarios</option>
+                    </select>
+                </div>
+                <button type="submit">Solicitar Préstamo</button>
+            </form>
+            <div id="prestamo-mensaje"></div>
+        </section>
+    </main>
+    
+    <script src="js/app.js"></script>
+</body>
+</html> 
